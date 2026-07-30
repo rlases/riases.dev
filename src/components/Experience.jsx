@@ -34,9 +34,11 @@ export default function Experience() {
             variants={fadeUpItem}
             className={`timeline-item timeline-item--${TONES[i % TONES.length]}`}
           >
-            <p className="timeline-period">{item.period}</p>
-            <h3 className="timeline-role">{item.role}</h3>
-            <p className="timeline-org">{item.org}</p>
+            <div className="timeline-meta">
+              <p className="timeline-period">{item.period}</p>
+              <h3 className="timeline-role">{item.role}</h3>
+              <p className="timeline-org">{item.org}</p>
+            </div>
             <p className="timeline-desc">{item.description}</p>
           </motion.li>
         ))}

@@ -12,11 +12,31 @@
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-weight: 700;
   font-size: 20px;
   letter-spacing: -0.4px;
   color: var(--fg);
   text-decoration: none;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--fg);
+  color: var(--bg);
+  flex: none;
+}
+
+.brand-mark-icon {
+  width: 15px;
+  height: 15px;
 }
 
 .brand-dot {
@@ -1066,6 +1086,27 @@ main {
   max-width: 65ch;
 }
 
+@media (min-width: 641px) {
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .timeline-role {
+    margin-bottom: 6px;
+  }
+
+  .timeline-org {
+    margin-bottom: 0;
+  }
+
+  .timeline-desc {
+    max-width: 58ch;
+  }
+}
+
 .edu-achievement {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1579,10 +1620,11 @@ main {
   border-radius: 50%;
   background: linear-gradient(135deg, #dfe3e6, #7c848a);
   color: #1a1c1e;
-  font-family: var(--mono);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: -0.5px;
+}
+
+.contact-card-avatar-mark {
+  width: 20px;
+  height: 20px;
 }
 
 .contact-card-eyebrow {
@@ -1737,7 +1779,7 @@ main {
 }
 
 .site-footer {
-  padding: 40px 24px 56px;
+  padding: 40px 24px 112px;
   text-align: center;
   color: var(--muted);
   font-size: 14px;
@@ -2196,6 +2238,10 @@ main {
 @media (max-width: 640px) {
   .dock {
     display: none;
+  }
+
+  .site-footer {
+    padding-bottom: 56px;
   }
 }
 

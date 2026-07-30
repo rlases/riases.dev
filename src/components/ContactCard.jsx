@@ -6,12 +6,7 @@ import { downloadVCard } from '../hooks/useVCard.js'
 import { useTilt } from '../hooks/useTilt.js'
 import { useSpotlight } from '../hooks/useSpotlight.js'
 import { unlockAchievement } from '../hooks/useAchievements.js'
-
-const INITIALS = profile.name
-  .split(' ')
-  .slice(0, 2)
-  .map((word) => word[0])
-  .join('')
+import BrandMark from './BrandMark.jsx'
 
 const TERMINAL_LINES = [
   { prompt: 'whoami', output: profile.handle },
@@ -69,7 +64,9 @@ export default function ContactCard() {
             <span>cert.</span>
           </div>
           <div className="contact-card-top">
-            <span className="contact-card-avatar">{INITIALS}</span>
+            <span className="contact-card-avatar">
+              <BrandMark className="contact-card-avatar-mark" />
+            </span>
             <p className="contact-card-eyebrow">{profile.handle}.</p>
           </div>
           <div>

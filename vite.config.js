@@ -16,6 +16,7 @@ export default defineConfig({
       injectRegister: 'auto',
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
+        globIgnores: ['**/rlases-brand-kit/**'],
         navigateFallbackDenylist: [/^\/?og-image\.png$/],
       },
     }),
