@@ -1,4 +1,4 @@
-import { Document, Page, Text, View, StyleSheet, Link } from '@react-pdf/renderer'
+import { Document, Page, Text, View, StyleSheet, Link, Image } from '@react-pdf/renderer'
 import { profile, experience, education, certifications } from '../data/profile.js'
 
 const ACCENT = '#a8790a'
@@ -11,6 +11,15 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontFamily: 'Helvetica',
     color: '#111111',
+  },
+  headerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  },
+  logo: {
+    width: 30,
+    height: 30,
   },
   name: {
     fontSize: 22,
@@ -114,8 +123,13 @@ export default function ResumeDocument() {
   return (
     <Document title={`CV - ${profile.name}`} author={profile.name}>
       <Page size="A4" style={styles.page}>
-        <Text style={styles.name}>{profile.name}</Text>
-        <Text style={styles.role}>{profile.role}</Text>
+        <View style={styles.headerRow}>
+          <View>
+            <Text style={styles.name}>{profile.name}</Text>
+            <Text style={styles.role}>{profile.role}</Text>
+          </View>
+          <Image src="/rlases-brand-kit/png/06-icono-negro-sobre-blanco@2x.png" style={styles.logo} />
+        </View>
         <View style={styles.contactRow}>
           <Text>{profile.location}</Text>
           <Text>{profile.links.email}</Text>
