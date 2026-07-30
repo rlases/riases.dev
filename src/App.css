@@ -1457,8 +1457,8 @@ main {
 
 .contact-card {
   position: relative;
-  width: 340px;
-  height: 350px;
+  width: 292px;
+  height: 322px;
   transform-style: preserve-3d;
   cursor: pointer;
 }
@@ -1469,8 +1469,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 26px;
-  border-radius: 18px;
+  padding: 20px;
+  border-radius: 16px;
   border: 2px solid transparent;
   background:
     linear-gradient(145deg, var(--bg-subtle), var(--bg)) padding-box,
@@ -1529,25 +1529,25 @@ main {
 
 .contact-card-stat b {
   font-family: var(--mono);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 800;
   color: var(--accent);
 }
 
 .contact-card-stat span {
   font-family: var(--mono);
-  font-size: 8.5px;
+  font-size: 7.5px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--muted);
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .contact-card-top {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .contact-card-avatar {
@@ -1555,55 +1555,55 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: linear-gradient(135deg, #dfe3e6, #7c848a);
   color: #1a1c1e;
   font-family: var(--mono);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: -0.5px;
 }
 
 .contact-card-eyebrow {
   color: #b8bec3;
   font-weight: 600;
-  font-size: 12.5px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .contact-card-name {
   color: var(--fg);
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
   line-height: 1.15;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 
 .contact-card-role {
-  font-size: 12.5px;
-  line-height: 1.5;
+  font-size: 11px;
+  line-height: 1.45;
   color: var(--muted);
 }
 
 .contact-card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
 .contact-card-tag {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   font-family: var(--mono);
-  font-size: 9.5px;
+  font-size: 8.5px;
   font-weight: 500;
   line-height: 1;
-  padding: 4px 8px;
+  padding: 4px 7px;
   border-radius: 999px;
   border: 1px solid transparent;
   background: color-mix(in srgb, currentColor 10%, transparent);
@@ -1630,16 +1630,16 @@ main {
 }
 
 .contact-card-location {
-  font-size: 12px;
+  font-size: 10.5px;
   font-family: var(--mono);
   color: var(--muted);
 }
 
 .contact-card-hint {
   flex: none;
-  font-size: 11px;
+  font-size: 9.5px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   color: var(--muted);
 }
 
@@ -1647,27 +1647,27 @@ main {
   transform: rotateY(180deg);
   align-items: center;
   text-align: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .contact-card-back-header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 6px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--fg);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .contact-card-terminal-icon {
-  font-size: 17px;
+  font-size: 15px;
   color: var(--fg);
 }
 
 .contact-card-terminal {
   width: 100%;
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 10px;
   background: color-mix(in srgb, var(--bg) 60%, transparent);
   border: 1px solid var(--border);
@@ -1679,7 +1679,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .contact-card-terminal-line:last-of-type {
@@ -1687,34 +1687,34 @@ main {
 }
 
 .contact-card-terminal-prompt {
-  font-size: 10.5px;
+  font-size: 9.5px;
   color: var(--muted);
 }
 
 .contact-card-terminal-output {
-  font-size: 12px;
+  font-size: 10.5px;
   color: var(--fg);
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
 .contact-card-terminal-cursor {
   display: inline-block;
-  width: 6px;
-  height: 12px;
-  margin-top: 4px;
+  width: 5px;
+  height: 10px;
+  margin-top: 3px;
   background: var(--fg);
   animation: blink 1s step-end infinite;
 }
 
 .contact-card-back-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contact-card-linkedin-btn,
 .contact-card-save {
-  padding: 9px 16px;
-  font-size: 12.5px;
+  padding: 7px 14px;
+  font-size: 11.5px;
 }
 
 .site-footer {
