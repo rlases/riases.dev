@@ -41,7 +41,15 @@ export default function Achievements() {
             aria-label="Logros desbloqueados"
           >
             <div className="achievements-header">
-              <h3>Logros</h3>
+              <div className="achievements-title-group">
+                <img
+                  className="achievements-mark"
+                  src="/rlases-brand-kit/png/08-icono-pastel-secundario@2x.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <h3>Logros</h3>
+              </div>
               <span className="achievements-count">
                 {unlocked.length}/{unlockableAchievements.length}
               </span>

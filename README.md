@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/rlases-brand-kit/png/04-monocromatico-blanco-transparente@2x.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/rlases-brand-kit/png/03-monocromatico-negro-transparente@2x.png">
+    <img alt="rlases" src="public/rlases-brand-kit/png/03-monocromatico-negro-transparente@2x.png" width="320">
+  </picture>
+</p>
+
 # rlases — Portafolio
 
 Portafolio personal de Jhunier Hernandez Calderon ([@riassd](https://github.com/riassd)),
