@@ -53,7 +53,7 @@ function runCommand(raw) {
   }
   if (lower === 'sudo hire-me') {
     return [
-      '[sudo] password for riassd: ********',
+      `[sudo] password for ${profile.handle}: ********`,
       'Verificando credenciales… OK',
       'Ejecutando protocolo de contratación…',
       '✔ Disponibilidad confirmada',
@@ -70,7 +70,7 @@ function runCommand(raw) {
 
 function TerminalWindow({ open, onClose }) {
   const [lines, setLines] = useState([
-    { type: 'system', text: `riassd-terminal v1.0.0 — escribe "help" para empezar` },
+    { type: 'system', text: `${profile.handle}-terminal v1.0.0 — escribe "help" para empezar` },
   ])
   const [input, setInput] = useState('')
   const [history, setHistory] = useState([])
@@ -165,7 +165,7 @@ function TerminalWindow({ open, onClose }) {
               <span className="terminal-dot terminal-dot--red" />
               <span className="terminal-dot terminal-dot--yellow" />
               <span className="terminal-dot terminal-dot--green" />
-              <span className="terminal-titlebar-label">riassd@portfolio: ~</span>
+              <span className="terminal-titlebar-label">{profile.handle}@portfolio: ~</span>
             </div>
             <div
               className="terminal-body"
