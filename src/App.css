@@ -1272,14 +1272,14 @@ main {
 
 .contact-link {
   display: inline-block;
-  font-size: clamp(22px, 4vw, 40px);
+  font-size: clamp(17px, 2.2vw, 22px);
   font-weight: 600;
-  letter-spacing: -1px;
+  letter-spacing: -0.3px;
   color: var(--fg);
   text-decoration: none;
   border-bottom: 2px solid var(--border);
-  padding-bottom: 6px;
-  margin-bottom: 32px;
+  padding-bottom: 5px;
+  margin-bottom: 24px;
   overflow-wrap: anywhere;
   transition: border-color 0.2s, color 0.2s;
 }
@@ -1352,14 +1352,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
-  margin-top: 4px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  margin-top: 2px;
+  border-radius: 9px;
   border: 1px solid var(--border);
   background: var(--bg-subtle);
   color: var(--muted);
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
 }
