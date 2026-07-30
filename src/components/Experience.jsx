@@ -4,6 +4,9 @@ import { useScrambleText } from '../hooks/useScrambleText.js'
 import { fadeUpItem, staggerContainer, viewport } from '../motion.js'
 import EduTimeline from './EduTimeline.jsx'
 
+const TONES = ['blue', 'purple', 'pink', 'green']
+const ACHIEVEMENT_TONES = ['orange', 'cyan']
+
 export default function Experience() {
   const scramble = useScrambleText('Experiencia')
 
@@ -25,8 +28,12 @@ export default function Experience() {
         {scramble.display}
       </motion.h2>
       <motion.ul variants={staggerContainer(0.08)} className="timeline">
-        {experience.map((item) => (
-          <motion.li key={item.role} variants={fadeUpItem} className="timeline-item">
+        {experience.map((item, i) => (
+          <motion.li
+            key={item.role}
+            variants={fadeUpItem}
+            className={`timeline-item timeline-item--${TONES[i % TONES.length]}`}
+          >
             <p className="timeline-period">{item.period}</p>
             <h3 className="timeline-role">{item.role}</h3>
             <p className="timeline-org">{item.org}</p>
@@ -43,8 +50,11 @@ export default function Experience() {
         <div>
           <h3 className="subsection-title">Logros</h3>
           <div className="achievement-list">
-            {achievements.map((item) => (
-              <div key={item.title} className="achievement-banner">
+            {achievements.map((item, i) => (
+              <div
+                key={item.title}
+                className={`achievement-banner achievement-banner--${ACHIEVEMENT_TONES[i % ACHIEVEMENT_TONES.length]}`}
+              >
                 <p className="achievement-title">{item.title}</p>
                 <p className="achievement-desc">{item.description}</p>
               </div>

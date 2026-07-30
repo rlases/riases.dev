@@ -6,14 +6,15 @@ import { fadeUpItem, staggerContainer, viewport } from '../motion.js'
 import MagneticButton from './MagneticButton.jsx'
 
 const ALL_PROJECTS = [featuredProject, ...otherProjects]
+const TONES = ['blue', 'purple', 'pink', 'green', 'cyan', 'orange']
 
-function ProjectRow({ project, isOpen, onToggle }) {
+function ProjectRow({ project, tone, isOpen, onToggle }) {
   const links = project.links ?? (project.repoUrl ? [{ label: 'Repositorio', url: project.repoUrl }] : [])
   const previewTech = project.tech.slice(0, 3)
   const extraTech = project.tech.length - previewTech.length
 
   return (
-    <motion.div variants={fadeUpItem} className="proj-row" data-open={isOpen}>
+    <motion.div variants={fadeUpItem} className={`proj-row proj-row--${tone}`} data-open={isOpen}>
       <button
         type="button"
         className="proj-row-header"
@@ -125,6 +126,7 @@ export default function Projects() {
           <ProjectRow
             key={project.name}
             project={project}
+            tone={TONES[i % TONES.length]}
             isOpen={openIndex === i}
             onToggle={() => setOpenIndex(openIndex === i ? -1 : i)}
           />
