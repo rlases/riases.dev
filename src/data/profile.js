@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Jhunier Hernandez Calderon',
-  handle: 'riassd',
+  handle: 'rlases',
   role: 'Ingeniero de Sistemas · Maestría en Ciberseguridad (en curso)',
   roles: [
     'Ingeniero de Sistemas',

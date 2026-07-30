@@ -1,4 +1,5 @@
 import { useActiveSection } from '../hooks/useActiveSection.js'
+import { profile } from '../data/profile.js'
 
 const LINKS = [
   { id: 'experiencia', label: 'Experiencia' },
@@ -14,7 +15,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" data-cursor="hover">
-        riassd<span className="brand-dot">.</span>
+        {profile.handle}<span className="brand-dot">.</span>
       </a>
       <nav className="nav">
         {LINKS.map((link) => (

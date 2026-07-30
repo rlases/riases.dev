@@ -1,4 +1,4 @@
-# riassd — Portafolio
+# rlases — Portafolio
 
 Portafolio personal de Jhunier Hernandez Calderon ([@riassd](https://github.com/riassd)),
 construido con React + Vite y publicado en GitHub Pages bajo dominio propio.

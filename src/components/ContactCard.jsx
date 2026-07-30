@@ -70,7 +70,7 @@ export default function ContactCard() {
           </div>
           <div className="contact-card-top">
             <span className="contact-card-avatar">{INITIALS}</span>
-            <p className="contact-card-eyebrow">riassd.</p>
+            <p className="contact-card-eyebrow">{profile.handle}.</p>
           </div>
           <div>
             <h3 className="contact-card-name">{profile.name}</h3>
