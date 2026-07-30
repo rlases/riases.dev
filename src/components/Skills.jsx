@@ -21,6 +21,7 @@ import {
 } from 'react-icons/tb'
 import { profile } from '../data/profile.js'
 import { useSpotlight } from '../hooks/useSpotlight.js'
+import { useTapSpin } from '../hooks/useTapSpin.js'
 import { fadeUpItem, staggerContainer, viewport } from '../motion.js'
 
 const SKILL_ICONS = {
@@ -44,17 +45,25 @@ const SKILL_ICONS = {
 
 function SkillTile({ skill, tone }) {
   const spotlight = useSpotlight()
+  const spin = useTapSpin()
   const Icon = SKILL_ICONS[skill]
 
   return (
     <motion.li
       ref={spotlight.ref}
       onMouseMove={spotlight.onMouseMove}
+      onTap={spin.onTap}
+      onKeyDown={(e) => e.key === 'Enter' && spin.onTap()}
       variants={fadeUpItem}
       className={`skill-tile skill-tile--${tone}`}
+      data-cursor="hover"
+      role="button"
+      tabIndex={0}
     >
-      {Icon && <Icon className="skill-tile-icon" aria-hidden="true" />}
-      <span className="skill-tile-label">{skill}</span>
+      <motion.div className="skill-tile-spin" animate={spin.animate} transition={spin.transition}>
+        {Icon && <Icon className="skill-tile-icon" aria-hidden="true" />}
+        <span className="skill-tile-label">{skill}</span>
+      </motion.div>
     </motion.li>
   )
 }

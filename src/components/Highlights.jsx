@@ -3,6 +3,7 @@ import { TbAlertTriangle, TbBraces, TbHeadset, TbRobot, TbShieldLock, TbTerminal
 import { highlights } from '../data/highlights.js'
 import { useSpotlight } from '../hooks/useSpotlight.js'
 import { useTilt } from '../hooks/useTilt.js'
+import { useTapSpin } from '../hooks/useTapSpin.js'
 import { useScrambleText } from '../hooks/useScrambleText.js'
 import { fadeUpItem, scaleIn, staggerContainer, viewport } from '../motion.js'
 
@@ -18,6 +19,7 @@ const ICONS = {
 function BentoItem({ item }) {
   const spotlight = useSpotlight()
   const tilt = useTilt()
+  const spin = useTapSpin()
   const Icon = ICONS[item.label]
 
   return (
@@ -30,10 +32,17 @@ function BentoItem({ item }) {
         tilt.onMouseMove(e)
       }}
       onMouseLeave={tilt.onMouseLeave}
+      onTap={spin.onTap}
+      onKeyDown={(e) => e.key === 'Enter' && spin.onTap()}
       className={`bento-item bento-item--${item.tone} ${item.span ? `bento-item--${item.span}` : ''}`}
+      data-cursor="hover"
+      role="button"
+      tabIndex={0}
     >
-      {Icon && <Icon className="bento-icon" aria-hidden="true" />}
-      <span className="bento-label">{item.label}</span>
+      <motion.div className="bento-item-spin" animate={spin.animate} transition={spin.transition}>
+        {Icon && <Icon className="bento-icon" aria-hidden="true" />}
+        <span className="bento-label">{item.label}</span>
+      </motion.div>
     </motion.div>
   )
 }
