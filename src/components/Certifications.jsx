@@ -13,6 +13,13 @@ const ICONS = {
   university: FaGraduationCap,
 }
 
+const TONES = {
+  cisco: 'cyan',
+  google: 'orange',
+  microsoft: 'blue',
+  university: 'purple',
+}
+
 export default function Certifications() {
   const viewportRef = useRef(null)
   const trackRef = useRef(null)
@@ -60,8 +67,9 @@ export default function Certifications() {
         >
           {certifications.map((cert) => {
             const Icon = ICONS[cert.icon] ?? FaGraduationCap
+            const tone = TONES[cert.icon] ?? 'blue'
             return (
-              <motion.div key={cert.name} variants={fadeUpItem} className="cert-card">
+              <motion.div key={cert.name} variants={fadeUpItem} className={`cert-card cert-card--${tone}`}>
                 <div className="cert-icon">
                   <Icon aria-hidden="true" />
                 </div>
