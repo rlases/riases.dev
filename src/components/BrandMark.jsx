@@ -1,0 +1,12 @@
+export default function BrandMark({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+      <g transform="translate(48 48) scale(1.6)">
+        <path
+          fillRule="evenodd"
+          d="M36 216V104H76V119C91 105 110 98 132 98C174 98 201 124 201 162C201 184 192 202 177 216H123C147 211 160 193 160 165C160 143 148 132 128 132C97 132 78 151 78 184V216H36ZM92 216H222V238H92V216ZM177 42H213V184H177V42ZM177 151H191V184H177V151Z"
+        />
+      </g>
+    </svg>
+  )
+}

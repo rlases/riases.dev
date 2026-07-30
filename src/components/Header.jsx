@@ -1,5 +1,6 @@
 import { useActiveSection } from '../hooks/useActiveSection.js'
 import { profile } from '../data/profile.js'
+import BrandMark from './BrandMark.jsx'
 
 const LINKS = [
   { id: 'experiencia', label: 'Experiencia' },
@@ -15,6 +16,9 @@ export default function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="#top" data-cursor="hover">
+        <span className="brand-mark">
+          <BrandMark className="brand-mark-icon" />
+        </span>
         {profile.handle}<span className="brand-dot">.</span>
       </a>
       <nav className="nav">
